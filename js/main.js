@@ -20,7 +20,15 @@ keys.forEach(function (key) {
 });
 
 // Write named functions that change the color of the keys below
+const keyPlay = (event) => {
+  event.target.style.backgroundColor = 'green'
+};
+notes.forEach(note => note.addEventListener('mousedown', keyPlay));
 
+const keyReturn = event => {
+  event.target.style.backgroundColor = ''
+};
+notes.forEach(note => note.addEventListener('mouseup', keyReturn));
 // Write a named function with event handler properties
 
 // Write a loop that runs the array elements through the function
